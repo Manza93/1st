@@ -19,10 +19,12 @@ def front_x(words):
                     wordnox.append (i)
     final = sorted(wordx) + sorted(wordnox)
     print final
-    return
+    return final
+
 def sort_last(tuples):
     print sorted(tuples, key=lambda number: number[-1])
-    return
+    return sorted(tuples, key=lambda number: number[-1])
+
 def test(got, expected):
     prefix = 'OK' if got == expected else ' X'
     # !r prints a Python representation of the strings (complete with quotes)
