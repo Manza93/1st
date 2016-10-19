@@ -1,10 +1,14 @@
-def match_ends(words):
-        lengt_word = len(words)
-        first_car = words[0]
-        last_car = words[-1]
-        if lengt_word >= 3 and first_car == last_car :
-                print len(words)
-        return
+def match_ends(words):  
+        n = 0
+        for i in words:
+                lengt_word = len(i)
+                if lengt_word > 0:
+                    first_car = i[0]
+                    last_car = i[-1]
+                    if lengt_word >= 2 and first_car == last_car:
+                        n = n + 1
+        return n
+
 def front_x(words):
     wordx = []
     wordnox = []
