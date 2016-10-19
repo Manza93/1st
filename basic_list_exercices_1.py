@@ -47,3 +47,30 @@ def main():
     test(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
          [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
 main()
+
+def remove_adjacent(nums):
+    nums_once = list(set(nums))
+    print nums_once
+    return nums_once
+	
+def linear_merge(list1, list2):
+    final = sorted (list(list1)+list(list2))
+    print final
+    return final
+
+def main():
+    print 'remove_adjacent'
+    test(remove_adjacent([1, 2, 2, 3]), [1, 2, 3])
+    test(remove_adjacent([2, 2, 3, 3, 3]), [2, 3])
+    test(remove_adjacent([]), [])
+
+    print
+    print 'linear_merge'
+    test(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']),
+        ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']),
+        ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']),
+        ['aa', 'aa', 'aa', 'bb', 'bb'])
+
+main()
